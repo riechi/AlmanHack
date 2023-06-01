@@ -52,9 +52,32 @@ nav li{
 nav li:last-child{
     border-right: 0px solid;
 }
-
+header{
+    background-color:#00ff33; 
+    
+}
 aside {
     background-color: #00ff33;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+body{
+    background-image: url('img/010100101101_BACKGROUND.jfif');
+    background-repeat: repeat;
+    
+  
+}
+
+section{
+    color:#00ff33;
+}
+div{
+    color:#00ff33;
+}
+
+form{
+    color: #00ff33;
+    padding-bottom: 15px;
 }
 
 
