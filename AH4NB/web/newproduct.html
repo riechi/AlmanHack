@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>AlmanHack</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Gruppo BogoSorted">
+        <meta name="keywords" content="Hacking,books,deeepweebbe,nonetico,anoNymus">
+        <meta name="description" content="lo giuro effebiai questo sito vende materiale illegale wink wink non dovevo scriverlo aiuto.">
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    </head>
+    <body>
+    <header class="col-12 col-s-12">
+        <a href="index.html" > <img src="img/logo_almanhack_1.png" alt="Logo AlmanHack" width="200" height="200" /> </a> 
+    </header>
+        <nav class="col-12">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chi_siamo.html">Chi semo</a></li>
+                <li><a href="storage.html">Prodotti</a></li>
+                <li><a href="newproduct.html">Link segreto dove publicare i toui libri di Lohakcer</a></li>
+                <li><a href="login.html">login</a></li>
+                <li><a href="registrate.html">Registrati</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section class="col-8 col-s-10">
+                <h2>inserir dati</h2>
+            <form class="col-8" action="catalogo/libri/libridacontrollare" method="POST">
+                <label for="titolo">Titolo</label>
+                <input type="text"  name="titolo" id="titolo" value="inserire titolo">
+                <br>
+            
+                <label for="autore">Autore</label>
+                <input type="text"  name="autore" id="autore" value="inserire autore">
+                <br>
+                
+                <label for="prezzo">Prezzo</label>
+                <input type="number"  name="prezzo" id="prezzo" value="0.0">
+                <br>
+                
+                <label for="immagine_copertina">Immagine copertina</label>
+                <input type="url"  name="immagine_copertina" id="immagine_copertina"  value="inserire URL immagine">
+                <br>
+                
+                <label for="descrizione">Descrizione</label>
+                <textarea id="descrizione" name="descrizione" rows="10" cols="100">inserire descrizione</textarea>
+                <br>
+                
+                <label for="hackingEtico">HAcking etnico</label>
+                <input type="radio"  name="categoria" id="hackingEtico" value="Hacking Etico"><br>
+                <label for="HackingPocoEtico">Hacking Poco Etico</label>
+                <input type="radio"  name="categoria" id="HackingPocoEtico" value="Hacking Poco Etico"><br><!-- comment -->
+                <label for="hackingMoltoPocoEtico">Hackinh Molto Poco Etico</label>
+                <input type="radio"  name="categoria" id="hackingMoltoPocoEtico" value="Hacking Molto Poco Etico"><br>
+                <label for="libriCucina">libriCucina</label>
+                <input type="radio"  name="categoria" id="libriCucina" value="LoHAckerCHeBOnta"><br>
+                <button> invio megalittico </button>
+            </form>
+            </section>
+            
+        <aside class="col-4 col-s-2">
+                <ul>
+                    <li>first</li>
+                    <li>second</li>
+                    <li>third</li>
+                </ul>
+        </aside>
+        </main>
+        <footer class="col-12">
+            <img src="img/blue-silhouette-group-circle_100x100.png" alt="uomini blu sospetti"/>
+        </footer>
+    </body>
+</html>
