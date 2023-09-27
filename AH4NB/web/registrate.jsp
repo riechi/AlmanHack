@@ -1,8 +1,11 @@
+<%-- 
+    Document   : registrate
+    Created on : 26 set 2023, 11:07:59
+    Author     : jusem
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
 <html>
     <head>
         <title>AlmanHack</title>
@@ -14,20 +17,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <link rel="stylesheet" type="text/css" href="style.css" media="screen">
     </head>
     <body>
-<header class="col-12 col-s-12">
-        <a href="index.html" > <img src="img/logo_almanhack_1.png" alt="Logo AlmanHack" width="200" height="150" /> </a> 
-    </header>
-        <nav class="col-12">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="chi_siamo.html">Chi semo</a></li>
-                <li><a href="storage.html">Prodotti</a></li>
-                <li><a href="newproduct.html">Link segreto dove publicare i tuoi libri di Lohakcer</a></li>
-                <li><a href="login.html">login</a></li>
-                <li><a href="registrate.html">Registrati</a></li>
-            </ul>
-        </nav>
-        <main >
+        <main>
+            <jsp:include page="header.jsp"/>
+            <jsp:include page="navbar.jsp"/>
             <section class="col-8 col-s-10">
             <h2>Benvenuti su Almanhack: continuate a vostro rischio e pericolo</h2>
             <h3>Login</h3>
@@ -41,16 +33,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 <input type="submit" value="Regga">
             </form>
             </section>
-        <aside class="col-4 col-s-2">
-                <ul>
-                    <li>first</li>
-                    <li>second</li>
-                    <li>third</li>
-                </ul>
-        </aside>
-        </main>
-        <footer class="col-12">
-            <p>FOOTER</p>
-        </footer>
+            <jsp:include page="aside.jsp"/>
+            <jsp:include page="footer.jsp"/>
     </body>
 </html>
