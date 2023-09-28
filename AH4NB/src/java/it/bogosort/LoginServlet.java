@@ -11,13 +11,16 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import it.bogosort.utils.Utils;
+import it.bogosort.utils.LoginUtils;
+import it.bogosort.exception.InvalidParamException;
 
 /**
  *
  * @author jusem
  */
-@WebServlet(name = "prova", urlPatterns = {"/prova"})
-public class almanhack extends HttpServlet {
+@WebServlet(name = "login", urlPatterns = {"/login"})
+public class LoginServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,21 +35,33 @@ public class almanhack extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        String nome= request.getParameter("nome");
-        String cognome= request.getParameter("cognome");
-        String voto= request.getParameter("voto");
+      String username= request.getParameter("username");
+        String password= request.getParameter("password");
+        int minString=3;
+        int maxString=20;
+      String message="login avvenuto con successo ";
+        try{
+        Utils.checkString(username, minString, maxString);
+        Utils.checkString(password, minString, maxString);
+        LoginUtils.checkPassword(username, password);
+        }catch(InvalidParamException e){
+        message="password o nome utente errati riprovare "+e.getMessage();
         
-        String frase= "il signo*/re/ra/ri " + nome + " "+ cognome + " ha preso il voto " + voto + " nella valutazione di picchiare  barboni  ";
+        }
+        
+      
+        
+        
         try (PrintWriter out = response.getWriter()) {
            
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet prova</title>");            
+            out.println("<title>Login Response</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println(frase);
+            out.println(message);
             out.println("</body>");
             out.println("</html>");
         }
