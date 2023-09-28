@@ -10,7 +10,7 @@ public class LoginUtils{
     private static String[] username={"hpLove","PinoInsegno"};
    private static String[] password={"ilovemycat","kakapaga"};
     
-    public static void checkPasswordi(String inUsername, String inPassword)throws InvalidParamException {
+    public static void checkPassword(String inUsername, String inPassword)throws InvalidParamException {
       boolean flag1=true;
       
       for(int i=0; i<username.length && i<password.length ;i++){
