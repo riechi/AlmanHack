@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import it.bogosort.utils.Utils;
 import it.bogosort.utils.LoginUtils;
 import it.bogosort.exception.InvalidParamException;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -34,7 +35,7 @@ public class LoginServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
+        HttpSession session=request.getSession();
       String username= request.getParameter("username");
         String password= request.getParameter("password");
         int minString=3;
@@ -43,28 +44,32 @@ public class LoginServlet extends HttpServlet {
         try{
         Utils.checkString(username, minString, maxString);
         Utils.checkString(password, minString, maxString);
-        LoginUtils.checkPassword(username, password);
+                if(LoginUtils.checkPassword(username, password)){
+                //login avvenuto
+                session.setAttribute("username",username);
+                session.setAttribute("lastLogin", Utils.convertTime(session.getLastAccessedTime()));
+                session.setMaxInactiveInterval(30);
+                response.sendRedirect("area_personale.jsp");
+                }else{
+                throw new InvalidParamException("Username o Password errati");
+                
+                }
+                    
+                
+        
+            
         }catch(InvalidParamException e){
-        message="password o nome utente errati riprovare "+e.getMessage();
+        session.invalidate();
+        request.setAttribute("errorMessage", e.getMessage());
+        request.setAttribute("link", "login.jsp");
+        request.getRequestDispatcher("error.jsp").forward(request, response);
         
         }
         
       
         
         
-        try (PrintWriter out = response.getWriter()) {
-           
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Login Response</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println(message);
-            out.println("</body>");
-            out.println("</html>");
-        }
+      
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -4,6 +4,8 @@
  */
 package it.bogosort.utils;
 import it.bogosort.exception.InvalidParamException;
+import java.util.Calendar;
+import java.util.TimeZone;
 /**
  *
  * @author jusem
@@ -24,4 +26,18 @@ public class Utils {
         throw new InvalidParamException("valore invalido");
             }
 }
+    
+public static String convertTime(long time){
+Calendar cal=Calendar.getInstance();
+
+cal.setTimeZone(TimeZone.getTimeZone("UTC"));
+cal.setTimeInMillis(time);
+
+return (cal.get(Calendar.DAY_OF_MONTH))+"/"+(cal.get(Calendar.MONTH))+
+        "/"+(cal.get(Calendar.YEAR))+"  "+(cal.get(Calendar.HOUR))+
+        ":"+(cal.get(Calendar.MINUTE))+":"+(cal.get(Calendar.SECOND))+
+        ":"+(cal.get(Calendar.MILLISECOND));
+
+}    
+    
 }
