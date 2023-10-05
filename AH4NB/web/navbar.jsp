@@ -30,7 +30,14 @@
                     <li>  <a href="area_personale.jsp">area personale</a> </li>
                 </c:if>
                 
-                <li><a href="registrate.jsp">Registrati</a></li>
+                    <c:if test="${empty username}">
+                    <li><a href="registrate.jsp">Registrati</a></li>
+                </c:if>
+                    
+                    <c:if test="${not empty username}">
+                    <li><a href="logout.jsp">logout</a></li>
+                </c:if>
+                
             </ul>
         </nav>
     </body>

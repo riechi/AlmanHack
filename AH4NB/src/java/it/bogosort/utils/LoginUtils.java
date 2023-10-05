@@ -7,8 +7,8 @@ import it.bogosort.exception.InvalidParamException;
 public class LoginUtils{
     
     
-    private static String[] username={"hpLove","PinoInsegno"};
-   private static String[] password={"ilovemycat","kakapaga"};
+    private static String[] username={"hpLove","PinoInsegno","abcd"};
+   private static String[] password={"ilovemycat","kakapaga","1234"};
     
     public static boolean checkPassword(String inUsername, String inPassword)throws InvalidParamException {
      
