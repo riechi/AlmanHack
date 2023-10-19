@@ -33,9 +33,9 @@
             <h3 >Login</h3>
             <form  action="login" method="POST">
                 <label for="username">Username</label>
-                <input type="text" name="username" id="username" value="Diggita username">
+                <input type="text" name="username" id="username" value="Digita username">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" value="Diggita password">
+                <input type="password" name="password" id="password" value="Digita password">
                 <input type="submit" value="Logga">
             </form>
              </section>

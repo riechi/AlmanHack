@@ -46,7 +46,7 @@
                 <input type="radio"  name="categoria" id="hackingEtico" value="Hacking Etico"><br>
                 <label for="HackingPocoEtico">Hacking Poco Etico</label>
                 <input type="radio"  name="categoria" id="HackingPocoEtico" value="Hacking Poco Etico"><br><!-- comment -->
-                <label for="hackingMoltoPocoEtico">Hackinh Molto Poco Etico</label>
+                <label for="hackingMoltoPocoEtico">hacking molto porco etico</label>
                 <input type="radio"  name="categoria" id="hackingMoltoPocoEtico" value="Hacking Molto Poco Etico"><br>
                 <label for="libriCucina">libriCucina</label>
                 <input type="radio"  name="categoria" id="libriCucina" value="LoHAckerCHeBOnta"><br>

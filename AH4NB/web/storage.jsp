@@ -22,10 +22,32 @@
             <jsp:include page="navbar.jsp"/>
             <section class="col-8 col-s-10">
                 <h3>Il Nostro catalogo</h3>
-                <c:forEach begin="0" end="5" var="i">
-                    <li>elemento ${i} </li>
+                <c:if test="${empty listaProdotti}">
+                    <c:redirect url="index.jsp"/>
+                </c:if>
+                
+                <c:if test="${not empty listaProdotti}">
+                   
+                <c:forEach items="${listaProdotti}" var="prodotto">
+                    <article>
+                        <h3><bold>${prodotto.getTitolo()}</bold></h3>
+                        <img src="${prodotto.getImgCopertina()}" alt="copertina del libro" width="100" height="160" />
+                        <p>
+                            questo prodotto è della seguente tipologia: <br>
+                            ${prodotto.getTipologia}
+                        </p>
+                        <p>${prodotto.getDescrizione()}<br><!--  -->
+                            scritto da: ${prodotto.getAutore()} <br><!-- comment -->                       
+                        </p>
+                        <p>
+                            di prezzo <b>${prodotto.getPrezzo}</b>
+                        </p>
+                        <p>publicato da: <i>${prodotto.getUsername()}</i></p>            
+                        
+                    </article>
                       
                 </c:forEach>
+                </c:if>
             </section>
             <jsp:include page="aside.jsp"/>
             <jsp:include page="footer.jsp"/>

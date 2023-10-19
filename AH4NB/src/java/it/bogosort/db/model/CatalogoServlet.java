@@ -1,8 +1,9 @@
+package it.bogosort.db.model;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
-package it.bogosot;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,13 +12,20 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import it.bogosort.db.model.ProdottiFactory;
+import it.bogosort.db.model.Prodotto;
+import it.bogosort.exception.InvalidParamException;
+import java.util.List;
+import java.util.Objects;
+import it.bogosort.utils.Utils;
+
 
 /**
  *
  * @author jusem
  */
-@WebServlet(name = "newproduct", urlPatterns = {"/newproduct"})
-public class newproduct extends HttpServlet {
+@WebServlet(name="storage", urlPatterns = {"/storage"})
+public class CatalogoServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,17 +40,17 @@ public class newproduct extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet newproduct</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet newproduct at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+            List <Prodotto> prodotti= ProdottiFactory.getInstance().getAllProdotti();
+            if(prodotti != null){
+                request.setAttribute("listaProdotti", prodotti);
+                request.getRequestDispatcher("index.jsp").forward(request, response);
+            }else{
+            throw new InvalidParamException("Nessun Catalogo");
+            
+            }
+        }catch(InvalidParamException e){
+            request.getRequestDispatcher("errors.jsp").forward(request, response);
+         }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -12,18 +12,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import it.bogosort.utils.Utils;
-import it.bogosort.utils.LoginUtils;
 import it.bogosort.exception.InvalidParamException;
 import javax.servlet.http.HttpSession;
-import it.bogosort.db.model.Utente;
-import it.bogosort.db.model.UtenteFactory;
-import java.util.Objects;
+
 /**
  *
  * @author jusem
  */
-@WebServlet(name = "login", urlPatterns = {"/login"})
-public class LoginServlet extends HttpServlet {
+@WebServlet(name = "NewProduct", urlPatterns = {"/newproduct"})
+public class NewProduct extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,38 +34,16 @@ public class LoginServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        HttpSession session=request.getSession();
-      String username= request.getParameter("username");
-        String password= request.getParameter("password");
-        int minString=3;
-        int maxString=20;
-      
-      //momento login
-        try{
-        Utils.checkString(username, minString, maxString);
-        Utente utente = UtenteFactory.getInstance().getUtenteByUsernamePassword( username, password);
-        if(utente != null){
-        //login avvenuto
-        session.setAttribute("username", username);
-        session.setAttribute("lastLogin",Utils.convertTime(session.getLastAccessedTime()));
-        session.setMaxInactiveInterval(30);
-        response.sendRedirect("user");
-        
-        }else{//login non avvenuto
-                throw new InvalidParamException(" Username o Password errati");
-                }
-                    
-        }catch(InvalidParamException e){
-        session.invalidate();
-        request.setAttribute("errorMessage", e.getMessage());
-        request.setAttribute("link", "login.jsp");
-        request.getRequestDispatcher("error.jsp").forward(request, response);
-        
+        try (PrintWriter out = response.getWriter()) {
+            String titolo= request.getParameter("titolo");
+            String autore= request.getParameter("autore");
+            String prezzo= request.getParameter("prezzo");
+            String immagine_copertina= request.getParameter("immagine_copertina");
+            String descrizione=request.getParameter("descrizione");
+            String categoria= request.getParameter("categoria");
+            
+            
         }
-        
-      
-              
-      
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
