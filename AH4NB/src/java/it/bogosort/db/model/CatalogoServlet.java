@@ -12,8 +12,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import it.bogosort.db.model.ProdottiFactory;
-import it.bogosort.db.model.Prodotto;
 import it.bogosort.exception.InvalidParamException;
 import java.util.List;
 import java.util.Objects;
@@ -39,18 +37,18 @@ public class CatalogoServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
+        try /**(PrintWriter out = response.getWriter())**/ {
             List <Prodotto> prodotti= ProdottiFactory.getInstance().getAllProdotti();
             if(prodotti != null){
-                request.setAttribute("listaProdotti", prodotti);
-                request.getRequestDispatcher("index.jsp").forward(request, response);
-            }else{
+                request.setAttribute("listaProdotti", prodotti); 
+                request.getRequestDispatcher("storage.jsp").forward(request, response);
+            }
+            else{
             throw new InvalidParamException("Nessun Catalogo");
-            
             }
         }catch(InvalidParamException e){
-            request.getRequestDispatcher("errors.jsp").forward(request, response);
-         }
+            request.getRequestDispatcher("error.jsp").forward(request, response);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

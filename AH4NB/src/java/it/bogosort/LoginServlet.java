@@ -52,7 +52,7 @@ public class LoginServlet extends HttpServlet {
         session.setAttribute("username", username);
         session.setAttribute("lastLogin",Utils.convertTime(session.getLastAccessedTime()));
         session.setMaxInactiveInterval(30);
-        response.sendRedirect("user");
+        response.sendRedirect("area_personale.jsp");
         
         }else{//login non avvenuto
                 throw new InvalidParamException(" Username o Password errati");

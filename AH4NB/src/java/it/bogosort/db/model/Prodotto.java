@@ -14,10 +14,10 @@ public class Prodotto {
  private long id;
  private String username;
  private String titolo;
- private String  autore;
- private String  imgCopertina;
+ private String autore;
+ private String imgCopertina;
  private String descrizione;
- private float prezzo;
+ private float  prezzo;
  private String tipologia;
  
  

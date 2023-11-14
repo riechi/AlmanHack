@@ -26,7 +26,7 @@
         </c:if>
             
             <c:if test="${empty username}">
-             <jsp:include page="header.jsp"/>
+            <jsp:include page="header.jsp"/>
             <jsp:include page="navbar.jsp"/>
             <section class="col-8 col-s-10">
             <h2 >Benvenuti su Almanhack: continuate a vostro rischio e pericolo</h2>

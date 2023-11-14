@@ -4,7 +4,6 @@
  */
 package it.bogosort.db.model;
 
-import it.bogosort.db.model.Prodotto;
 import java.util.List;
 import it.bogosort.db.DatabaseManager;
 import java.sql.Connection;
@@ -31,7 +30,7 @@ public class ProdottiFactory {
     return instance;
     }
     
-     @SuppressWarnings("empty-statement")
+    @SuppressWarnings("empty-statement")
     public List<Prodotto> getAllProdotti(){
     Connection conn=null;
     PreparedStatement stmt=null;
@@ -39,7 +38,7 @@ public class ProdottiFactory {
     List<Prodotto> prodotti= new ArrayList<>();
     
     try{
-    conn= DatabaseManager.getInstance().getDbConnection()    ;
+    conn= DatabaseManager.getInstance().getDbConnection();
     
     String query="SELECT * FROM prodotti";
     stmt=conn.prepareStatement(query);    

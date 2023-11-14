@@ -12,9 +12,9 @@
         <link rel="stylesheet" type="text/css" href="style.css" media="screen">
     </head>
     <body>
-        <c:if test="${empty username}">
+   <%-- <c:if test="${empty username}">
             <c:redirect  url="login.jsp"/>
-        </c:if>
+        </c:if> --%>
         
         <c:if test="${not empty username}">
             <jsp:include page="header.jsp"/>

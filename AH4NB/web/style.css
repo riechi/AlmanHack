@@ -1,17 +1,7 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : 4 mag 2023, 18:52:11
-    Author     : Riechi
-*/
-
 /* Layout a 12 colonne */
 * {
   box-sizing: border-box;
 }
-
 
 
 [class*="col-"] {
@@ -20,13 +10,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 }
 
 
-
-
-
 /* For mobile phones: */
 [class*="col-"] {
   width: 100%;
 }
+
 
 @media only screen and (min-width: 600px) {
   /* For tablets: */
@@ -60,18 +48,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 }
 
 
+header{
+    height: 200px;
+    text-align: center;
+    color:#003333;
+    background-color:#00ff33; 
+}
+
+
 /* Navbar */
 nav {
     background-color: #003333;
-    text-align: center;
-     
+    text-align: center; 
 }
-
-nav li > a{
-    color: #00ff33;
-    
-}
-
 nav li{
     list-style-type: none;
     display: inline-block;
@@ -82,54 +71,47 @@ nav li{
     margin-bottom: 10px;
     
 }
-
 nav li:last-child{
     border-right: 0px solid;
 }
-header{
-    text-align: center;
-    color:#003333;
-    background-color:#00ff33; 
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
-    
+nav li > a{
+    color: #00ff33; 
 }
 
+
 aside {
-    
     border: 5px  groove #003333;
     background-color:#00ff33 ;
     color:#003333;
-   margin-bottom: 1px;
+    margin-bottom: 1px;
 }
-
 aside>ul>li{
     margin-top:   50px;
     margin-bottom:   50px;
-    
 }
 
 
 body{
     background-image: url('img/almanhack_pattern.png');
     background-repeat: repeat;
-    
-  
 }
+
 
 section{
     color:#00ff33;
     background-color:#003333;
 }
-
 section>form{
-      color:#00ff33;
+    color:#00ff33;
     background-color:#003333;
     padding-bottom: 15px;
 }
+
+
 div{
     color:#00ff33;
 }
+
 
 form{
     color: #00ff33;
@@ -137,12 +119,13 @@ form{
     padding-bottom: 15px;
 }
 
-
 footer {
     background-color: #00ff33;
-    text-align: center;
+    display: inline-block;
 }
-
-
-
-
+footer li{
+    display: inline-block;
+}
+footer>img{
+    height: 50px;
+}

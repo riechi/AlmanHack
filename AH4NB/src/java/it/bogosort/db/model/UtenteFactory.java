@@ -42,7 +42,7 @@ public class UtenteFactory {
     String query="SELECT * FROM utenti WHERE username = ? AND passw = ?";
     stmt=conn.prepareStatement(query);
     stmt.setString(1, username);
-    stmt.setString(2,passw );
+    stmt.setString(2, passw);
     
     set= stmt.executeQuery();
     
