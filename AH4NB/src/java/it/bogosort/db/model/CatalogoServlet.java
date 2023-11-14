@@ -42,14 +42,14 @@ public class CatalogoServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             List <Prodotto> prodotti= ProdottiFactory.getInstance().getAllProdotti();
             if(prodotti != null){
-                request.setAttribute("listaProdotti", prodotti);
-                request.getRequestDispatcher("index.jsp").forward(request, response);
-            }else{
+                request.setAttribute("listaProdotti", prodotti); 
+                request.getRequestDispatcher("storage.jsp").forward(request, response);
+            }
+            else{
             throw new InvalidParamException("Nessun Catalogo");
-            
             }
         }catch(InvalidParamException e){
-            request.getRequestDispatcher("errors.jsp").forward(request, response);
+            request.getRequestDispatcher("error.jsp").forward(request, response);
          }
     }
 

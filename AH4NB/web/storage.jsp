@@ -22,9 +22,9 @@
             <jsp:include page="navbar.jsp"/>
             <section class="col-8 col-s-10">
                 <h3>Il Nostro catalogo</h3>
-                <c:if test="${empty listaProdotti}">
-                    <c:redirect url="index.jsp"/>
-                </c:if>
+                <c:if test="${empty listaProdotti}"> 
+                    <c:redirect url="storage"/>
+                </c:if>           
                 
                 <c:if test="${not empty listaProdotti}">
                    

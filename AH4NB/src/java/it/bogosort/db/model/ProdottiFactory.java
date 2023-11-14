@@ -39,7 +39,7 @@ public class ProdottiFactory {
     List<Prodotto> prodotti= new ArrayList<>();
     
     try{
-    conn= DatabaseManager.getInstance().getDbConnection()    ;
+    conn= DatabaseManager.getInstance().getDbConnection();
     
     String query="SELECT * FROM prodotti";
     stmt=conn.prepareStatement(query);    
