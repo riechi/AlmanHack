@@ -19,6 +19,7 @@
     <body>
             <jsp:include page="header.jsp"/>
             <jsp:include page="navbar.jsp"/>
+            <!-- caricamento lista db -->
             <c:if test="${empty listaProdotti}"> 
                     <c:redirect url="storage"/>
             </c:if>
@@ -50,8 +51,8 @@
                 </c:if>
             </section>
         </main>
-            <jsp:include page="aside.jsp"/>
-            <jsp:include page="footer.jsp"/>
+        <jsp:include page="aside.jsp"/>
+        <jsp:include page="footer.jsp"/>
     </body>
 </html>
 
