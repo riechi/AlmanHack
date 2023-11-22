@@ -42,14 +42,22 @@
                 <textarea id="descrizione" name="descrizione" rows="10" cols="100">inserire descrizione</textarea>
                 <br>
                 
-                <label for="hackingEtico">HAcking etnico</label>
-                <input type="radio"  name="categoria" id="hackingEtico" value="Hacking Etico"><br>
-                <label for="HackingPocoEtico">Hacking Poco Etico</label>
-                <input type="radio"  name="categoria" id="HackingPocoEtico" value="Hacking Poco Etico"><br><!-- comment -->
-                <label for="hackingMoltoPocoEtico">hacking molto porco etico</label>
-                <input type="radio"  name="categoria" id="hackingMoltoPocoEtico" value="Hacking Molto Poco Etico"><br>
-                <label for="libriCucina">libriCucina</label>
-                <input type="radio"  name="categoria" id="libriCucina" value="LoHAckerCHeBOnta"><br>
+                <input type="radio"  name="categoria" id="hackingEtico" value="Hacking Etico">
+                <label for="hackingEtico">HAcking etnico</label><br>
+                
+                
+                <input type="radio"  name="categoria" id="HackingPocoEtico" value="Hacking Poco Etico">
+                <label for="HackingPocoEtico">Hacking Poco Etico</label><br>
+                
+                 <input type="radio"  name="categoria" id="hackingMoltoPocoEtico" value="Hacking Molto Poco Etico">
+                 <label for="hackingMoltoPocoEtico">hacking molto porco etico</label><br>
+               
+                
+                <input type="radio"  name="categoria" id="libriCucina" value="LoHAckerCHeBOnta">
+                <label for="libriCucina">libriCucina</label><br>
+                
+                
+                <input type="radio" name="caegoria" value="">Altro <input type="text" name="other_reason" /><br>
                 <button> invio megalittico </button>
             </form>
             </section>

@@ -65,9 +65,36 @@ public class ProdottiFactory {
     try{stmt.close();}catch(Exception e){};
     try{conn.close();}catch(Exception e){};
     }
-    
-    return null;
+       return null;
     }
+    
+    
+    //metodo per inserire il prodotto
+    public void inserisciProdotto(Prodotto newProdotto){
+    Connection conn=null;
+    PreparedStatement stmt=null;
+    ResultSet set=null;
+        
+    try{
+    conn= DatabaseManager.getInstance().getDbConnection();
+      
+    String query="INSERT INTO prodotti VALUES" + "( deafult, '" + newProdotto.getAutore() + "', '" +
+                newProdotto.getUsername() + "', '" + newProdotto.getTitolo()+ "', '" + newProdotto.getAutore() 
+            + "', '" + newProdotto.getImgCopertina() + "', '" + newProdotto.getDescrizione() + "', " + String.valueOf(newProdotto.getPrezzo())
+            + ", '" + newProdotto.getTipologia()+"')";
+    stmt=conn.prepareStatement(query);    
+    set= stmt.executeQuery();      
+    
+    }catch(SQLException e){
+        Logger.getLogger(UtenteFactory.class.getName()).log(Level.SEVERE, null, e);
+       
+    }finally{
+    try{set.close();}catch(Exception e){};
+    try{stmt.close();}catch(Exception e){};
+    try{conn.close();}catch(Exception e){};
+    }
+    }
+    
     
     
 }

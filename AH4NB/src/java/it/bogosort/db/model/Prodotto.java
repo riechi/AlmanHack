@@ -23,6 +23,8 @@ public class Prodotto {
  
  public Prodotto(){};
  
+ 
+ 
  public long getID(){ return id;}
  public void setID(long id){this.id=id;}
  
@@ -33,7 +35,7 @@ public class Prodotto {
  public void setTitolo(String titolo){this.titolo=titolo;}
  
  public String getAutore(){ return autore;}
- public void getAutore(String autore){this.autore=autore;}
+ public void setAutore(String autore){this.autore=autore;}
  
  public String getImgCopertina(){ return imgCopertina;}
  public void setImgCopertina(String imgCopertina){this.imgCopertina=imgCopertina;}

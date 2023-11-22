@@ -41,7 +41,6 @@ public class Utente {
     if(this==obj){return true;}
     if(this==null){return false;}
     if(getClass()!=obj.getClass()){return false;}
-    
     final Utente other=(Utente) obj;
     if(!Objects.equals(this.username, other.username)){return false;}
     return true;
