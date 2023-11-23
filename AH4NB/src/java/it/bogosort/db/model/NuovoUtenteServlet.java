@@ -44,8 +44,13 @@ public class NuovoUtenteServlet extends HttpServlet {
          Utils.checkString(nome, 0, 20);
          Utils.checkString(cognome, 0, 20);
 
+            if(UtenteFactory.getInstance().checkUtente(username)){
         UtenteFactory.getInstance().insertUtente(username, password, nome, cognome);
-            
+            }else{
+            response.sendRedirect("registrati.jsp");
+            }   
+        
+        
         }catch(InvalidParamException e){
        
         request.setAttribute("errorMessage", e.getMessage());

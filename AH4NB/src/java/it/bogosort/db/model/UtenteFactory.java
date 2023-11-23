@@ -112,11 +112,11 @@ public void insertUtente(String username, String passw, String nome, String cogn
     try{
     conn= DatabaseManager.getInstance().getDbConnection();
     
-    if(UtenteFactory.getInstance().checkUtente(username)){
+    
     String query="INSERT INTO utenti VALUES ('"+username+"', '"+passw+"', '"+nome+"', '"+cognome+"')";
     stmt=conn.prepareStatement(query);
     set= stmt.executeQuery();
-    }
+   
 }catch(SQLException e){
         Logger.getLogger(UtenteFactory.class.getName()).log(Level.SEVERE, null, e);
        

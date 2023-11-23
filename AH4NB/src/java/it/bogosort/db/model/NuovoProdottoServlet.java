@@ -46,7 +46,7 @@ public class NuovoProdottoServlet extends HttpServlet {
    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        HttpSession session=request.getSession();
+        
         String titolo= request.getParameter("titolo");
         String autore= request.getParameter("autore");
         float prezzo= Float.valueOf(request.getParameter("prezzo")); 
