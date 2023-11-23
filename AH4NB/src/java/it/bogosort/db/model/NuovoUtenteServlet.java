@@ -8,20 +8,18 @@ import it.bogosort.exception.InvalidParamException;
 import it.bogosort.utils.Utils;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author jusem
  */
-@WebServlet(name = "NewProduct", urlPatterns = {"/NewProduct"})
-public class NuovoProdottoServlet extends HttpServlet {
+@WebServlet(name = "newUser", urlPatterns = {"/newUser"})
+public class NuovoUtenteServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,65 +30,29 @@ public class NuovoProdottoServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    public class CatalogoServlet extends HttpServlet {
-
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-   protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        HttpSession session=request.getSession();
-        String titolo= request.getParameter("titolo");
-        String autore= request.getParameter("autore");
-        float prezzo= Float.valueOf(request.getParameter("prezzo")); 
-        String immagine_copertina= request.getParameter("immagine_copertina");
-        String descrizione= request.getParameter("descrizione");
-        String categoria= request.getParameter("categoria");
         String username= request.getParameter("username");
-        int minString=3;
-        int maxString=20;
-      
-        try{
-            //controllo input
-        Utils.checkString(titolo, 0, 20);
-        Utils.checkString(autore, 0, 20);
-        Utils.checkString(immagine_copertina, 0, 200);
-        Utils.checkString(descrizione, 0, 500);
-        Utils.checkString(categoria, 0, 50);
-              
-        //creazione dell'oggetto prodotto da mandare alla Factory
-        Prodotto newProdotto= new Prodotto();
-        
-        newProdotto.setUsername(username);
-        newProdotto.setTitolo(titolo);
-        newProdotto.setTipologia(categoria);
-        newProdotto.setPrezzo(prezzo);
-        newProdotto.setImgCopertina(immagine_copertina);
-        newProdotto.setAutore(autore);
-        newProdotto.setDescrizione(descrizione);
-        
-        ProdottiFactory.getInstance().inserisciProdotto(newProdotto);
-                response.sendRedirect("storage.jsp");
+        String password= request.getParameter("password");
+        String nome= request.getParameter("nome");
+        String cognome= request.getParameter("cognome");
 
-        
-                    
+        try{
+         Utils.checkString(username, 0, 20);
+         Utils.checkString(password, 0, 20);
+         Utils.checkString(nome, 0, 20);
+         Utils.checkString(cognome, 0, 20);
+
+        UtenteFactory.getInstance().insertUtente(username, password, nome, cognome);
+            
         }catch(InvalidParamException e){
+       
         request.setAttribute("errorMessage", e.getMessage());
-        request.setAttribute("link", "login.jsp");
+        request.setAttribute("link", "registrati.jsp");
         request.getRequestDispatcher("error.jsp").forward(request, response);
         
         }
-        
-      
-              
-      
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -132,5 +94,4 @@ public class NuovoProdottoServlet extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-}
 }

@@ -78,7 +78,7 @@ public class ProdottiFactory {
     try{
     conn= DatabaseManager.getInstance().getDbConnection();
       
-    String query="INSERT INTO prodotti VALUES" + "( deafult, '" + newProdotto.getAutore() + "', '" +
+    String query="INSERT INTO prodotti VALUES " + "( deafult, '" + newProdotto.getAutore() + "', '" +
                 newProdotto.getUsername() + "', '" + newProdotto.getTitolo()+ "', '" + newProdotto.getAutore() 
             + "', '" + newProdotto.getImgCopertina() + "', '" + newProdotto.getDescrizione() + "', " + String.valueOf(newProdotto.getPrezzo())
             + ", '" + newProdotto.getTipologia()+"')";

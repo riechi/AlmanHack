@@ -66,4 +66,64 @@ public class UtenteFactory {
     
     return null;
     }
+    
+    public boolean checkUtente (String username){
+    Connection conn=null;
+    PreparedStatement stmt=null;
+    ResultSet set=null;
+    
+    try{
+    conn= DatabaseManager.getInstance().getDbConnection();
+    
+    String query="SELECT * FROM utenti WHERE username = ?";
+    stmt=conn.prepareStatement(query);
+    stmt.setString(1, username);    
+    set= stmt.executeQuery();
+    
+    //false--> esiste un utente con lo stesso username
+    if(set.next()){
+        Utente utente= new Utente();
+        utente.setUsername(set.getString("username"));
+        utente.setPassw(set.getString("passw"));
+        utente.setNome(set.getString("nome"));
+        utente.setCognome(set.getString("cognome"));
+        
+       if(utente.getUsername().equals(username)){return false;}
+
+    }   
+    return true;
+    }catch(SQLException e){
+        Logger.getLogger(UtenteFactory.class.getName()).log(Level.SEVERE, null, e);
+       
+    }finally{
+    try{set.close();}catch(Exception e){};
+    try{stmt.close();}catch(Exception e){};
+    try{conn.close();}catch(Exception e){};
+    }
+    return false;
+    }
+
+public void insertUtente(String username, String passw, String nome, String cognome){
+
+ Connection conn=null;
+    PreparedStatement stmt=null;
+    ResultSet set=null;
+    
+    try{
+    conn= DatabaseManager.getInstance().getDbConnection();
+    
+    if(UtenteFactory.getInstance().checkUtente(username)){
+    String query="INSERT INTO utenti VALUES ('"+username+"', '"+passw+"', '"+nome+"', '"+cognome+"')";
+    stmt=conn.prepareStatement(query);
+    set= stmt.executeQuery();
+    }
+}catch(SQLException e){
+        Logger.getLogger(UtenteFactory.class.getName()).log(Level.SEVERE, null, e);
+       
+    }finally{
+    try{set.close();}catch(Exception e){};
+    try{stmt.close();}catch(Exception e){};
+    try{conn.close();}catch(Exception e){};
+    }
+}
 }

@@ -22,6 +22,7 @@
         </c:if>
         
         <c:if test="${not empty username}">
+            
             <jsp:include page="header.jsp"/>
             <jsp:include page="navbar.jsp"/>
             <section class="col-8 col-s-10">

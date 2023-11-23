@@ -1,6 +1,6 @@
 <%-- 
-    Document   : login
-    Created on : 26 set 2023, 11:03:29
+    Document   : registrati
+    Created on : 23 nov 2023, 11:27:25
     Author     : jusem
 --%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>AlmanHack</title>
+        <title>AlmanHack: Registrazione</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Gruppo BogoSorted">
@@ -17,35 +17,37 @@
         <link rel="stylesheet" type="text/css" href="style.css" media="screen">
     </head>
     <body>
-        <main>
-           
-            <c:if test="${not empty username}">
+        <c:if test="${not empty username}">
             
                 <c:redirect  url="area_personale.jsp"/>
            
         </c:if>
             
             <c:if test="${empty username}">
+        <main>
             <jsp:include page="header.jsp"/>
             <jsp:include page="navbar.jsp"/>
             <section class="col-8 col-s-10">
-            <h2 >Benvenuti su Almanhack: continuate a vostro rischio e pericolo</h2>
-            <h3 >Login</h3>
-            <form  action="login" method="POST">
+            <h2 >Benvenuti su Almanhack: siete pronti a entrare in questo mondo oscuro?</h2>
+            <h3 >Registrati ORA</h3>
+            <form  action="newUser" method="POST">
+                
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" value="Digita nome">
+                <label for="cognome">cognome</label>
+                <input type="text" name="cognome" id="cognome" value="Digita cognome"> <br>
+                
                 <label for="username">Username</label>
                 <input type="text" name="username" id="username" value="Digita username">
+                
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" value="Digita password">
-                <input type="submit" value="Logga">
+                <input type="password" name="password" id="password" value="Digita password"><br>              
+       
+                <input type="submit" value="NON SEI ANCORA REGISTRATO?">
             </form>
-            
-            <h3>Non sei ancora registrato? <a href="registrati.jsp"> registrati ora! </a></h3>
-             </section>
+            </section>
             <jsp:include page="aside.jsp"/>
             <jsp:include page="footer.jsp"/>
         </c:if>
-        
-        
-            
     </body>
 </html>

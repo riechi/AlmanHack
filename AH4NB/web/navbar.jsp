@@ -22,16 +22,23 @@
                 <li><a href="index.jsp">Home</a></li>
                 <li><a href="chi_siamo.jsp">Chi semo</a></li>
                 <li><a href="storage.jsp">Prodotti</a></li>
-                <li><a href="newproduct.jsp">Link segreto dove publicare i toui libri di Lohakcer</a></li>
-                <c:if test="${empty username}">
-                    <li><a href="login.jsp">login</a></li>
+                
+                
+                 <c:if test="${empty username}">
+                    <li><a href="registrati.jsp">registrati ora!</a></li>
                 </c:if>
+                    
                 <c:if test="${not empty username}">
-                    <li>  <a href="area_personale.jsp">area personale</a> </li>
+                    <li><a href="newproduct.jsp">Link segreto dove publicare i toui libri di Lohakcer</a></li>
                 </c:if>
                 
-                    <c:if test="${empty username}">
-                    <li><a href="registrate.jsp">Registrati</a></li>
+                
+             <c:if test="${empty username}">
+                    <li><a href="login.jsp">login</a></li>
+                </c:if>
+                    
+                <c:if test="${not empty username}">
+                    <li>  <a href="area_personale.jsp">area personale</a> </li>
                 </c:if>
                     
                     <c:if test="${not empty username}">

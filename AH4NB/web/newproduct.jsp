@@ -4,6 +4,8 @@
     Author     : jusem
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,12 +18,19 @@
         <link rel="stylesheet" type="text/css" href="style.css" media="screen">
     </head>
     <body>
+    <c:if test="${empty username}">
+                <c:redirect  url="login.jsp"/>           
+        </c:if> 
+                
+        <c:if test="${not empty username}">
+            
         <main>
             <jsp:include page="header.jsp"/>
             <jsp:include page="navbar.jsp"/>
+           
              <section class="col-8 col-s-10">
                 <h2>inserir dati</h2>
-            <form class="col-8" action="catalogo/libri/libridacontrollare" method="POST">
+            <form class="col-8" action="NewProduct" method="POST">
                 <label for="titolo">Titolo</label>
                 <input type="text"  name="titolo" id="titolo" value="inserire titolo">
                 <br>
@@ -57,12 +66,15 @@
                 <label for="libriCucina">libriCucina</label><br>
                 
                 
-                <input type="radio" name="caegoria" value="">Altro <input type="text" name="other_reason" /><br>
-                <button> invio megalittico </button>
+                <input type="radio" name="categoria" value="">Altro <input type="text" name="other_reason" /><br>
+                
+                <input type="submit" value="invio ultra"/>
             </form>
             </section>
             <jsp:include page="aside.jsp"/>
             <jsp:include page="footer.jsp"/>
+        </c:if>
     </body>
+            
 </html>
 
