@@ -49,7 +49,7 @@ public class NuovoProdottoServlet extends HttpServlet {
         
         String titolo= request.getParameter("titolo");
         String autore= request.getParameter("autore");
-        float prezzo= Float.valueOf(request.getParameter("prezzo")); 
+        String prezzo= request.getParameter("prezzo"); 
         String immagine_copertina= request.getParameter("immagine_copertina");
         String descrizione= request.getParameter("descrizione");
         String categoria= request.getParameter("categoria");
@@ -65,18 +65,10 @@ public class NuovoProdottoServlet extends HttpServlet {
         Utils.checkString(descrizione, 0, 500);
         Utils.checkString(categoria, 0, 50);
               
-        //creazione dell'oggetto prodotto da mandare alla Factory
-        Prodotto newProdotto= new Prodotto();
         
-        newProdotto.setUsername(username);
-        newProdotto.setTitolo(titolo);
-        newProdotto.setTipologia(categoria);
-        newProdotto.setPrezzo(prezzo);
-        newProdotto.setImgCopertina(immagine_copertina);
-        newProdotto.setAutore(autore);
-        newProdotto.setDescrizione(descrizione);
+       
         
-        ProdottiFactory.getInstance().inserisciProdotto(newProdotto);
+        ProdottiFactory.getInstance().inserisciProdotto(titolo, autore, prezzo, immagine_copertina, descrizione, categoria, username);
                 response.sendRedirect("storage.jsp");
 
         
@@ -88,8 +80,7 @@ public class NuovoProdottoServlet extends HttpServlet {
         
         }
         
-      
-              
+                   
       
     }
 

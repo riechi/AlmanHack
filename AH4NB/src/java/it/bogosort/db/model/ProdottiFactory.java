@@ -70,7 +70,7 @@ public class ProdottiFactory {
     
     
     //metodo per inserire il prodotto
-    public void inserisciProdotto(Prodotto newProdotto){
+    public void inserisciProdotto(String titolo, String autore,String prezzo,String immagine_copertina,String descrizione,String categoria,String username ){
     Connection conn=null;
     PreparedStatement stmt=null;
     ResultSet set=null;
@@ -78,10 +78,7 @@ public class ProdottiFactory {
     try{
     conn= DatabaseManager.getInstance().getDbConnection();
       
-    String query="INSERT INTO prodotti VALUES " + "( deafult, '" + newProdotto.getAutore() + "', '" +
-                newProdotto.getUsername() + "', '" + newProdotto.getTitolo()+ "', '" + newProdotto.getAutore() 
-            + "', '" + newProdotto.getImgCopertina() + "', '" + newProdotto.getDescrizione() + "', " + String.valueOf(newProdotto.getPrezzo())
-            + ", '" + newProdotto.getTipologia()+"')";
+    String query="INSERT INTO prodotti VALUES " + "( default, '" + username +  "', '" + titolo+  "', '" + autore+  "', '" + immagine_copertina+  "', '" + descrizione+  "', "+ prezzo +  ", '"  +categoria+"')" ;
     stmt=conn.prepareStatement(query);    
     set= stmt.executeQuery();      
     
