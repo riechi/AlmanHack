@@ -38,7 +38,7 @@ public class LoginServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session=request.getSession();
-      String username= request.getParameter("username");
+        String username= request.getParameter("username");
         String password= request.getParameter("password");
         int minString=3;
         int maxString=20;
@@ -46,12 +46,12 @@ public class LoginServlet extends HttpServlet {
       //momento login
         try{
         Utils.checkString(username, minString, maxString);
-        Utente utente = UtenteFactory.getInstance().getUtenteByUsernamePassword( username, password);
+        Utente utente = UtenteFactory.getInstance().getUtenteByUsernamePassword(username, password);
         if(utente != null){
         //login avvenuto
         session.setAttribute("username", username);
-        session.setAttribute("lastLogin",Utils.convertTime(session.getLastAccessedTime()));
-        session.setMaxInactiveInterval(30);
+        session.setAttribute("lastLogin", Utils.convertTime(session.getLastAccessedTime()));
+        session.setMaxInactiveInterval(120);
         response.sendRedirect("area_personale.jsp");
         
         }else{//login non avvenuto

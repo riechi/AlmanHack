@@ -19,7 +19,7 @@ import java.util.logging.Logger;
  * @author jusem
  */
 public class ProdottiFactory {
-     private static ProdottiFactory instance;
+    private static ProdottiFactory instance;
     private ProdottiFactory(){};
     
     
@@ -46,13 +46,14 @@ public class ProdottiFactory {
     
     while(set.next()){
         Prodotto prodotto= new Prodotto();
+        prodotto.setID(set.getLong("id"));
         prodotto.setUsername(set.getString("username"));
+        prodotto.setTitolo(set.getString("titolo"));
+        prodotto.setAutore(set.getString("autore"));
+        prodotto.setImgCopertina(set.getString("copertina"));
         prodotto.setDescrizione(set.getString("descrizione"));
         prodotto.setPrezzo(set.getFloat("prezzo"));
-        prodotto.setImgCopertina(set.getString("copertina"));
-        prodotto.setTipologia(set.getString("tipologia"));
-        prodotto.setUsername(set.getString("username"));
-        prodotto.setID(set.getLong("id"));
+        prodotto.setTipologia(set.getString("categoria"));
         
         prodotti.add(prodotto);
     }
@@ -70,7 +71,7 @@ public class ProdottiFactory {
     
     
     //metodo per inserire il prodotto
-    public void inserisciProdotto(String titolo, String autore,String prezzo,String immagine_copertina,String descrizione,String categoria,String username ){
+    public void inserisciProdotto(String username, String titolo, String autore,String prezzo, String immagine_copertina, String descrizione, String categoria){
     Connection conn=null;
     PreparedStatement stmt=null;
     ResultSet set=null;
@@ -78,7 +79,7 @@ public class ProdottiFactory {
     try{
     conn= DatabaseManager.getInstance().getDbConnection();
       
-    String query="INSERT INTO prodotti VALUES " + "( default, '" + username +  "', '" + titolo+  "', '" + autore+  "', '" + immagine_copertina+  "', '" + descrizione+  "', "+ prezzo +  ", '"  +categoria+"')" ;
+    String query="INSERT INTO prodotti VALUES (default, '" +username+ "', '" +titolo+ "', '" +autore+ "', '" +immagine_copertina+ "', '" +descrizione+ "', " +prezzo+ ", '"  +categoria+"')" ;
     stmt=conn.prepareStatement(query);    
     set= stmt.executeQuery();      
     

@@ -20,7 +20,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author jusem
  */
-@WebServlet(name = "NewProduct", urlPatterns = {"/NewProduct"})
+@WebServlet(name = "NuovoProdotto", urlPatterns = {"/NuovoProdotto"})
 public class NuovoProdottoServlet extends HttpServlet {
 
     /**
@@ -32,30 +32,21 @@ public class NuovoProdottoServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    public class CatalogoServlet extends HttpServlet {
-
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-   protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+       
         response.setContentType("text/html;charset=UTF-8");
-        
+        HttpSession session=request.getSession(false);
+        String username = session.getAttribute("username").toString();
+        ///String username= request.getParameter("username");
         String titolo= request.getParameter("titolo");
         String autore= request.getParameter("autore");
         String prezzo= request.getParameter("prezzo"); 
         String immagine_copertina= request.getParameter("immagine_copertina");
         String descrizione= request.getParameter("descrizione");
         String categoria= request.getParameter("categoria");
-        String username= request.getParameter("username");
-        int minString=3;
-        int maxString=20;
+        
       
         try{
             //controllo input
@@ -68,14 +59,14 @@ public class NuovoProdottoServlet extends HttpServlet {
         
        
         
-        ProdottiFactory.getInstance().inserisciProdotto(titolo, autore, prezzo, immagine_copertina, descrizione, categoria, username);
-                response.sendRedirect("storage.jsp");
+        ProdottiFactory.getInstance().inserisciProdotto(username, titolo, autore, prezzo, immagine_copertina, descrizione, categoria);       
+        response.sendRedirect("storage.jsp");
 
         
                     
         }catch(InvalidParamException e){
         request.setAttribute("errorMessage", e.getMessage());
-        request.setAttribute("link", "login.jsp");
+        request.setAttribute("link", "newproduct.jsp");
         request.getRequestDispatcher("error.jsp").forward(request, response);
         
         }
@@ -123,5 +114,4 @@ public class NuovoProdottoServlet extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-}
 }

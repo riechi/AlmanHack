@@ -30,7 +30,7 @@
            
              <section class="col-8 col-s-10">
                 <h2>inserir dati</h2>
-            <form class="col-8" action="NewProduct" method="POST">
+            <form class="col-8" action="NuovoProdotto" method="POST">
                 <label for="titolo">Titolo</label>
                 <input type="text"  name="titolo" id="titolo" value="inserire titolo">
                 <br>

@@ -35,9 +35,9 @@ public class DatabaseManager {
  
     ///la porta dopo "localhost:" è 5432 se si ha un solo server PostGres
     public Connection getDbConnection(){
-    String db="jdbc:postgresql://localhost:5432/almanhack";
+    String db="jdbc:postgresql://localhost:5433/almanhack";
     String username= "postgres";
-    String passw= "fondamenti";
+    String passw= "DBsNextEpisode";
         
     try{ 
         Connection conn = DriverManager.getConnection(db,username,passw);
