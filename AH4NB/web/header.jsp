@@ -15,11 +15,14 @@
         <meta name="author" content="Gruppo BogoSorted">
         <meta name="keywords" content="Hacking,books,deeepweebbe,nonetico,anoNymus">
         <meta name="description" content="lo giuro effebiai questo sito vende materiale illegale wink wink non dovevo scriverlo aiuto.">
-        <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="style/style.css" media="screen">
+         <link rel="stylesheet" type="text/css" href="style/headerStyle.css" media="screen">
     </head>
     <body>
        <header class="col-12 col-s-12">
-        <a href="index.jsp" > <img src="img/logo_almanhack_1.png" alt="Logo AlmanHack" width="200" height="150" /> </a> 
+           <div class="center left">
+               <a href="index.jsp"> <img src="img/AlmanHackLogo2.0.png" alt="Logo AlmanHack" class="logo_d logo_m col-3 col-s-12 logo" /></a>  
+           <h1 class="titolo_d titolo_m titolo">ALMANHACK</h1></div>
     </header>
     </body>
 </html>

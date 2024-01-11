@@ -14,7 +14,7 @@
         <meta name="author" content="Gruppo BogoSorted">
         <meta name="keywords" content="Hacking,books,deeepweebbe,nonetico,anoNymus">
         <meta name="description" content="lo giuro effebiai questo sito vende materiale illegale wink wink non dovevo scriverlo aiuto.">
-        <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="style/style.css" media="screen">
     </head>
     <body>
         <c:if test="${empty username}">

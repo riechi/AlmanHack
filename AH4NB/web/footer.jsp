@@ -9,11 +9,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>footer</title>
     </head>
     <body>
        <footer class="col-12">
-            <p>FOOTER</p>
+           <p><b>BOGOSORT </b> <i>Giuseppe e Riccardo</i> jusemocci@gmail.com</p>
         </footer>
     </body>
 </html>

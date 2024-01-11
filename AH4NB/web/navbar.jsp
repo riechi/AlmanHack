@@ -14,35 +14,36 @@
         <meta name="author" content="Gruppo BogoSorted">
         <meta name="keywords" content="Hacking,books,deeepweebbe,nonetico,anoNymus">
         <meta name="description" content="lo giuro effebiai questo sito vende materiale illegale wink wink non dovevo scriverlo aiuto.">
-        <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="style/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="style/navbarStyle.css" media="screen">
     </head>
     <body>
        <nav class="col-12">
             <ul>
-                <li><a href="index.jsp">Home</a></li>
-                <li><a href="chi_siamo.jsp">Chi semo</a></li>
-                <li><a href="storage.jsp">Prodotti</a></li>
+                <li class="navcol"><a href="index.jsp">Home</a></li>
+                <li class="navcol"><a href="chi_siamo.jsp">Chi semo</a></li>
+                <li class="navcol"><a href="storage.jsp">Prodotti</a></li>
                 
                 
                  <c:if test="${empty username}">
-                    <li><a href="registrati.jsp">registrati ora!</a></li>
+                    <li class="navcol"><a href="registrati.jsp">registrati ora!</a></li>
                 </c:if>
                     
                 <c:if test="${not empty username}">
-                    <li><a href="newproduct.jsp">Link segreto dove publicare i toui libri di Lohakcer</a></li>
+                    <li class="navcol"><a href="newproduct.jsp">Link segreto dove publicare i toui libri di Lohakcer</a></li>
                 </c:if>
                 
                 
              <c:if test="${empty username}">
-                    <li><a href="login.jsp">login</a></li>
+                    <li class="navcol"><a href="login.jsp">login</a></li>
                 </c:if>
                     
                 <c:if test="${not empty username}">
-                    <li>  <a href="area_personale.jsp">area personale</a> </li>
+                    <li class="navcol">  <a href="area_personale.jsp">area personale</a> </li>
                 </c:if>
                     
                     <c:if test="${not empty username}">
-                    <li><a href="logout.jsp">logout</a></li>
+                    <li class="navcol"><a href="logout.jsp">logout</a></li>
                 </c:if>
                 
             </ul>

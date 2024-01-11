@@ -1,0 +1,25 @@
+
+
+
+ 
+nav {
+    background-color: #003333;
+    text-align: center; 
+}
+nav li{
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-right: 2px solid ;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+nav li:last-child{
+    border-right: 0px solid;
+}
+nav li > a{
+    color: #00ff33; 
+}
+

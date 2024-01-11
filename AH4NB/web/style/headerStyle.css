@@ -1,0 +1,50 @@
+header {
+    height: 15%;
+    color:#003333;
+    background-color:#00ff33; 
+    }
+  
+  .center{
+      display: grid;
+      place-items: center;
+  }
+  
+  .logo_m {float:none;
+           width: auto;
+           height: 70%;
+           object-position: top center;         
+  }
+  
+   .titolo_m{ 
+    text-align: center; 
+    font-size: 30px;
+}
+h1 {
+    color: #003333;
+    text-align: center;
+    font: monospace;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .logo_d{   float: left;
+             width: 200px;
+             height: 200px;             
+            }
+            
+  .titolo_d{ 
+    text-align: left;    
+}
+.left {
+    display:inline;
+}
+
+h1 {
+    float:left;
+    margin-top: 70px;
+    font-size: 20%;
+}
+}
+
+
+
