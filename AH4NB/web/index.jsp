@@ -21,7 +21,7 @@
         <main>
             <jsp:include page="header.jsp"/>
             <jsp:include page="navbar.jsp"/>
-            <section class="col-8 col-s-10">
+            <section class="col-9 col-s-12">
                 <h3>Benvenuti su Almanhack: continuate a vostro rischio e pericolo</h3>
                 <p>
                     Luogo per gente likemindend per discutere dei famosi prodotti dolciari LoHacker<br><!-- comment -->

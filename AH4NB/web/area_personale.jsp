@@ -25,7 +25,7 @@
             
             <jsp:include page="header.jsp"/>
             <jsp:include page="navbar.jsp"/>
-            <section class="col-8 col-s-10">
+            <section class="col-9 col-s-10">
                 <h3>Benvenuto sulla vostra personale area Almanhack: avete continuato a vostro rischio e pericolo</h3>
                 <p>
                     libri comprati<br><!-- comment -->

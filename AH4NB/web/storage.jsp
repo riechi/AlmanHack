@@ -14,8 +14,8 @@
         <meta name="author" content="Gruppo BogoSorted">
         <meta name="keywords" content="Hacking,books,deeepweebbe,nonetico,anoNymus">
         <meta name="description" content="lo giuro effebiai questo sito vende materiale illegale wink wink non dovevo scriverlo aiuto.">
-        <link rel="stylesheet" type="text/css" href="style.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="storageStyle.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="style/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="style/storageStyle.css" media="screen">
 
     </head>
     <body>
@@ -26,17 +26,24 @@
                     <c:redirect url="storage"/>
             </c:if>
             <main>
-            <section class="col-8 col-s-10">
-                <h3>Il Nostro catalogo</h3>
+                
+            <section class="col-9 col-s-12">
+                <h2> Il Nostro catalogo</h2>
                       
+                
+                
                 <c:if test="${not empty listaProdotti}">
                    
                 <c:forEach items="${listaProdotti}" var="prodotto">
-                    <article>
+                    <article class="col-4 col-s-12">
+                        <div class="galleryProduct">
+                            <a target="_blank" href="${prodotto.getImgCopertina()}">
                         <h3><bold>${prodotto.getTitolo()}</bold></h3>
                         <img src="${prodotto.getImgCopertina()}" alt="copertina del libro" width="100" height="160" />
+                            </a>
+                        <div class="descProduct">
                         <p>
-                            questo prodotto è della seguente tipologia: <br>
+                            Tipologia: <br>
                             ${prodotto.getTipologia()}
                         </p>
                         <p>${prodotto.getDescrizione()}<br>
@@ -46,7 +53,8 @@
                             di prezzo <b>${prodotto.getPrezzo()}</b>
                         </p>
                         <p>publicato da: <i>${prodotto.getUsername()}</i></p>            
-                        
+                        </div>
+                        </div>
                     </article>
                       
                 </c:forEach>

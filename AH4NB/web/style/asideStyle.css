@@ -1,13 +1,14 @@
 div.gallery {
-  margin: 5px;
+  margin: 1px;
   border: 1px solid #ccc;
   float: left;
   width: 100%;
+  height: auto;
   background-color: #003333;
 }
 
 div.gallery:hover {
-  border: 1px solid #777;
+  border: 3px solid red;
 }
 
 div.gallery img {
@@ -20,51 +21,13 @@ div.desc {
   text-align: center;
 }
 
-.product{
+
+
+
     
-        top: 10px;
-        left: 10px;
-        z-index: 1;
-    
-}
-
-[class*="sale"]{
-    display:none;
-}
-
-@media only screen and (min-width: 768px){
- [class*="sale"]{
-    display:inherit;
-}   
-    
- .sale1{
-    position: absolute;
-        top: 600px;
-        right: 70px;
-        z-index: 2;
-       height: 25%;
-      width: auto; 
-      transform: rotate(20deg);      
-}
-
-.sale2{
-    position: absolute;
-        top: 1000px;
-        right: 170px;
-        z-index: 2;
-       height: 35%;
-      width: auto; 
-       transform: rotate(-20deg);      
-}
-
-.sale3{
-    position: absolute;
-        top: 1750px;
-        right: 50px;
-        z-index: 2;
-       height: 20%;
-      width: auto;
-      transform: rotate(15deg);
-            
-}
+aside {
+    border: 5px  groove #003333;
+    background-color:#00ff33 ;
+    color:#003333;
+    margin-bottom: 1px;
 }

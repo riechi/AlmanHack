@@ -21,8 +21,9 @@
     <body>
        <header class="col-12 col-s-12">
            <div class="center left">
-               <a href="index.jsp"> <img src="img/AlmanHackLogo2.0.png" alt="Logo AlmanHack" class="logo_d logo_m col-3 col-s-12 logo" /></a>  
+           <a href="index.jsp"> <img src="img/AlmanHackLogo2.0.png" alt="Logo AlmanHack" width="100px" class="logo_d logo_m col-2 col-s-12 logo" /></a>  
            <h1 class="titolo_d titolo_m titolo">ALMANHACK</h1></div>
+         
     </header>
     </body>
 </html>

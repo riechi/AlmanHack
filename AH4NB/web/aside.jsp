@@ -15,36 +15,32 @@
         <title>aside</title>
     </head>
     <body>
-       <aside class="col-4 col-s-2">
-          
+       <aside class="col-3 col-s-12">
+           <h2>I NOSTRI SPONSOR</h2>
            
            
- <div class="gallery">
+ <div class="gallery col-12">
   <a target="_blank" href="https://www.abebooks.com/servlet/BookDetailsPL?bi=31692982904">
     <img class="product" src="img/yogaHorse.jpg" alt="Copertina Yoga Horse" width="300" height="200">
-    
-  </a>
+      </a>
   <div class="desc">CLICCA QUI PER ACQUISTARE WOW</div>
- </div> <br>
- <img class="sale1" src="img/WOW.png" width="50" height="50" class="sale1"/>
+ </div> 
+         
  
-           <div class="gallery">
+           <div class="gallery col-12">
   <a target="_blank" href="https://www.abebooks.com/products/isbn/9780595002368/30070611193">
-    <img class="prduct" src="img/IQeat.jpg" alt="CopertinaHow to Raise Your I.Q. by Eating Gifted Children" width="300" height="200">
+    <img class="product" src="img/IQeat.jpg" alt="Copertina How to Raise Your I.Q. by Eating Gifted Children" width="300" height="200">
   </a>
   <div class="desc">CLICCA QUI PER ACQUISTARE WOW</div>
-           </div> <br>
-          <img  src="img/big.png" width="50" height="50" class="sale2"/> 
+       </div> 
+        
            
   <div class="gallery">
   <a target="_blank" href="https://www.loacker.it/it/wafer-classic-napolitaner-multipack-45gx8/5637148349.p?back=true">
-    <img class="prduct" src="img/lohacker.jpg" alt="Wafer Loacker buonissimi" width="300" height="200">
+    <img class="product" src="img/lohacker.jpg" alt="Wafer Loacker buonissimi" width="300" height="200">
   </a>
   <div class="desc">CLICCA QUI PER ACQUISTARE WOW</div>
-  </div><br>
-  <img  src="img/bigsalt.png" width="50" height="50" class="sale3"/> 
-
-           
+  </div>    
             </aside>
     </body>
 </html>

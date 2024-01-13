@@ -27,7 +27,7 @@
         <main>
             <jsp:include page="header.jsp"/>
             <jsp:include page="navbar.jsp"/>
-            <section class="col-8 col-s-10">
+            <section class="col-9 col-s-12">
             <h2 >Benvenuti su Almanhack: siete pronti a entrare in questo mondo oscuro?</h2>
             <h3 >Registrati ORA</h3>
             <form  action="newUser" method="POST">

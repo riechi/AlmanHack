@@ -64,16 +64,6 @@
 
 
 
-aside {
-    border: 5px  groove #003333;
-    background-color:#00ff33 ;
-    color:#003333;
-    margin-bottom: 1px;
-}
-aside>ul>li{
-    margin-top:   50px;
-    margin-bottom:   50px;
-}
 
 
 body{

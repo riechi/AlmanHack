@@ -46,6 +46,7 @@ public class NuovoUtenteServlet extends HttpServlet {
 
             if(UtenteFactory.getInstance().checkUtente(username)){
                 UtenteFactory.getInstance().insertUtente(username, password, nome, cognome);
+                 response.sendRedirect("login.jsp");
             }else{
                   response.sendRedirect("registrati.jsp");
             }   

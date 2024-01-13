@@ -1,0 +1,43 @@
+div.team {
+  margin: 0px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 100%;
+  background-color: #003333;
+}
+
+div.team:hover {
+  border: 2px double #777;
+  
+}
+
+div.team img {
+  width: 200px;
+  height: auto;
+  }
+.imagine{
+    border: 2px double #777;
+}
+
+div.team img {
+  width: 200px;
+  height: auto;
+  }
+
+  
+  
+div.team img :hover{
+  width: 200px;
+  height: auto;
+}
+
+.bio{
+    margin: 10px;
+}
+
+
+
+@keyframes changeHover {
+  from
+  
+}
