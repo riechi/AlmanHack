@@ -40,7 +40,7 @@
                 <br>
                 
                 <label for="prezzo">Prezzo</label>
-                <input type="number"  name="prezzo" id="prezzo" value="0.0">
+                <input type="number" step="0.01" name="prezzo" id="prezzo" value="0.0">
                 <br>
                 
                 <label for="immagine_copertina">Immagine copertina</label>

@@ -55,7 +55,10 @@ public class LoginServlet extends HttpServlet {
         response.sendRedirect("area_personale.jsp");
         
         }else{//login non avvenuto
-                throw new InvalidParamException(" Username o Password errati");
+                
+            
+            throw new InvalidParamException(" Username o Password errati");
+                
                 }
                     
         }catch(InvalidParamException e){
