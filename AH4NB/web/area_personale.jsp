@@ -31,9 +31,9 @@
             <section class="col-9 col-s-10">
                 <h3>Benvenuto sulla vostra personale area Almanhack: avete continuato a vostro rischio e pericolo</h3>
                 <p>
-                    libri comprati<br><!-- comment -->
-                    libri pubblicati<br>
-                    snack acquistati<br>
+                    Libri comprati<br>
+                    Libri pubblicati<br>
+                    Snack acquistati<br>
                 </p>
             </section>
             <jsp:include page="aside.jsp"/>
@@ -41,4 +41,6 @@
             
         </c:if>
         
-   
+        
+    </body>
+</html>

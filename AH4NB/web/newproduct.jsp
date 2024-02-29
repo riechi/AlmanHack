@@ -16,7 +16,7 @@
         <meta name="keywords" content="Hacking,books,deeepweebbe,nonetico,anoNymus">
         <meta name="description" content="lo giuro effebiai questo sito vende materiale illegale wink wink non dovevo scriverlo aiuto.">
         <link rel="stylesheet" type="text/css" href="style.css" media="screen">
-         <link rel="stylesheet" type="text/css" href="style/asideStyle.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="style/asideStyle.css" media="screen">
         <link rel="stylesheet" type="text/css" href="style/headerStyle.css" media="screen">
         <link rel="stylesheet" type="text/css" href="style/navbarStyle.css" media="screen">
     </head>
@@ -32,7 +32,7 @@
             <jsp:include page="navbar.jsp"/>
            
              <section class="col-9 col-s-12">
-                <h2>inserir dati</h2>
+                <h2>Info prodotto</h2>
             <form class="col-8" action="NuovoProdotto" method="POST">
                 <label for="titolo">Titolo</label>
                 <input type="text"  name="titolo" id="titolo" value="inserire titolo">
@@ -55,14 +55,14 @@
                 <br>
                 
                 <input type="radio"  name="categoria" id="hackingEtico" value="Hacking Etico">
-                <label for="hackingEtico">HAcking etnico</label><br>
+                <label for="hackingEtico">Hacking Etico</label><br>
                 
                 
                 <input type="radio"  name="categoria" id="HackingPocoEtico" value="Hacking Poco Etico">
                 <label for="HackingPocoEtico">Hacking Poco Etico</label><br>
                 
-                 <input type="radio"  name="categoria" id="hackingMoltoPocoEtico" value="Hacking Molto Poco Etico">
-                 <label for="hackingMoltoPocoEtico">hacking molto porco etico</label><br>
+                 <input type="radio"  name="categoria" id="hackingEtnico" value="Hacking Etnico">
+                 <label for="Hacking Etnico">Hacking Etnico</label><br>
                
                 
                 <input type="radio"  name="categoria" id="libriCucina" value="LoHAckerCHeBOnta">
@@ -71,7 +71,7 @@
                 
                 <input type="radio" name="categoria" value="">Altro <input type="text" name="other_reason" /><br>
                 
-                <input type="submit" value="invio ultra"/>
+                <input type="submit" value="Pubblica"/>
             </form>
             </section>
             <jsp:include page="aside.jsp"/>

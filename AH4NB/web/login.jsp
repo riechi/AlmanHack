@@ -15,7 +15,7 @@
         <meta name="keywords" content="Hacking,books,deeepweebbe,nonetico,anoNymus">
         <meta name="description" content="lo giuro effebiai questo sito vende materiale illegale wink wink non dovevo scriverlo aiuto.">
         <link rel="stylesheet" type="text/css" href="style.css" media="screen">
-         <link rel="stylesheet" type="text/css" href="style/asideStyle.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="style/asideStyle.css" media="screen">
         <link rel="stylesheet" type="text/css" href="style/headerStyle.css" media="screen">
         <link rel="stylesheet" type="text/css" href="style/navbarStyle.css" media="screen">
     </head>
@@ -42,7 +42,7 @@
                 <input type="submit" value="Logga">
             </form>
             
-            <h3>Non sei ancora registrato? <a href="registrati.jsp"> registrati ora! </a></h3>
+            <h3>Non sei ancora registrato? <a href="registrati.jsp"> Registrati ora! </a></h3>
              </section>
             <jsp:include page="aside.jsp"/>
             <jsp:include page="footer.jsp"/>

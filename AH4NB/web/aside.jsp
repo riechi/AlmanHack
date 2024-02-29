@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
+<!DOCTYPE html>
 <html>
        <aside class="col-3 col-s-12">
            <h2>I NOSTRI SPONSOR</h2>
@@ -27,12 +28,19 @@
        </div> 
         
            
-  <div class="gallery">
+  <div class="gallery col-12">
   <a target="_blank" href="https://www.loacker.it/it/wafer-classic-napolitaner-multipack-45gx8/5637148349.p?back=true">
     <img class="product" src="img/lohacker.jpg" alt="Wafer Loacker buonissimi" width="300" height="200">
   </a>
   <div class="desc">CLICCA QUI PER ACQUISTARE WOW</div>
-  </div>    
+  </div>   
+           
+  <div class="gallery col-12">
+  <a target="_blank" href="https://ascii.theater/">
+    <img class="product" src="img/WendASCII.jpg" alt="Grandi classici in ASCII" width="300" height="200">
+  </a>
+  <div class="desc">CLICCA QUI PER SPECTARE WOW</div>
+  </div> 
+           
             </aside>
-   
 </html>

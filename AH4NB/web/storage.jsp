@@ -15,10 +15,10 @@
         <meta name="keywords" content="Hacking,books,deeepweebbe,nonetico,anoNymus">
         <meta name="description" content="lo giuro effebiai questo sito vende materiale illegale wink wink non dovevo scriverlo aiuto.">
         <link rel="stylesheet" type="text/css" href="style/style.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="style/storageStyle.css" media="screen">
-         <link rel="stylesheet" type="text/css" href="style/asideStyle.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="style/asideStyle.css" media="screen">
         <link rel="stylesheet" type="text/css" href="style/headerStyle.css" media="screen">
         <link rel="stylesheet" type="text/css" href="style/navbarStyle.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="style/storageStyle.css" media="screen">
 
     </head>
     <body>
@@ -46,16 +46,17 @@
                             </a>
                         <div class="descProduct">
                         <p>
-                            Tipologia: <br>
-                            ${prodotto.getTipologia()}
-                        </p>
-                        <p>${prodotto.getDescrizione()}<br>
-                            scritto da: ${prodotto.getAutore()} <br>                       
+                            Categoria: <b>${prodotto.getTipologia()}</b>
                         </p>
                         <p>
-                            di prezzo <b>${prodotto.getPrezzo()}</b>
+                            ${prodotto.getDescrizione()}
                         </p>
-                        <p>publicato da: <i>${prodotto.getUsername()}</i></p>            
+                            Scritto da: <b>${prodotto.getAutore()}</b>                      
+                        </p>
+                        <p>
+                            Prezzo: <b>${prodotto.getPrezzo()}</b>
+                        </p>
+                        <p> Pubblicato da: <i>${prodotto.getUsername()}</i></p>            
                         </div>
                         </div>
                     </article>

@@ -15,6 +15,9 @@
         <meta name="keywords" content="Hacking,books,deeepweebbe,nonetico,anoNymus">
         <meta name="description" content="lo giuro effebiai questo sito vende materiale illegale wink wink non dovevo scriverlo aiuto.">
         <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="style/asideStyle.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="style/headerStyle.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="style/navbarStyle.css" media="screen">
     </head>
     <body>
         <c:if test="${not empty username}">

@@ -7,36 +7,34 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    
        <nav class="col-12">
             <ul>
                 <li class="col-2 col-s-12"><a href="index.jsp">Home</a></li>
-                <li class="col-2 col-s-12"><a href="chi_siamo.jsp">Chi semo</a></li>
+                <li class="col-2 col-s-12"><a href="chi_siamo.jsp">Chi siamo</a></li>
                 <li class="col-2 col-s-12"><a href="storage.jsp">Prodotti</a></li>
                 
                 
                  <c:if test="${empty username}">
-                    <li class="col-3 col-s-12"><a href="registrati.jsp">registrati ora!</a></li>
+                    <li class="col-3 col-s-12"><a href="registrati.jsp">Registrati ora!</a></li>
                 </c:if>
                     
                 <c:if test="${not empty username}">
-                    <li class="col-2 col-s-12"><a href="newproduct.jsp">Link segreto dove publicare i toui libri di Lohakcer</a></li>
+                    <li class="col-2 col-s-12"><a href="newproduct.jsp">Inserisci un libro</a></li>
                 </c:if>
                 
                 
              <c:if test="${empty username}">
-                    <li class="col-3 col-s-12"><a href="login.jsp">login</a></li>
+                    <li class="col-3 col-s-12"><a href="login.jsp">Login</a></li>
                 </c:if>
                     
                 <c:if test="${not empty username}">
-                    <li class="col-2 col-s-12">  <a href="area_personale.jsp">area personale</a> </li>
+                    <li class="col-2 col-s-12">  <a href="area_personale.jsp">Area personale</a> </li>
                 </c:if>
                     
                     <c:if test="${not empty username}">
-                    <li class="col-2 col-s-12"><a href="logout.jsp">logout</a></li>
+                    <li class="col-2 col-s-12"><a href="logout.jsp">Logout</a></li>
                 </c:if>
                 
             </ul>
         </nav>
-   
 </html>

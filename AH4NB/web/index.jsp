@@ -15,7 +15,7 @@
         <meta name="keywords" content="Hacking,books,deeepweebbe,nonetico,anoNymus">
         <meta name="description" content="lo giuro effebiai questo sito vende materiale illegale wink wink non dovevo scriverlo aiuto.">
         <link rel="stylesheet" type="text/css" href="style/style.css" media="screen">
-         <link rel="stylesheet" type="text/css" href="style/asideStyle.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="style/asideStyle.css" media="screen">
         <link rel="stylesheet" type="text/css" href="style/headerStyle.css" media="screen">
         <link rel="stylesheet" type="text/css" href="style/navbarStyle.css" media="screen">
         
@@ -27,9 +27,9 @@
             <section class="col-9 col-s-12">
                 <h3>Benvenuti su Almanhack: continuate a vostro rischio e pericolo</h3>
                 <p>
-                    Luogo per gente likemindend per discutere dei famosi prodotti dolciari LoHacker<br><!-- comment -->
+                    Luogo per gente likeminded dove discutere dei famosi prodotti dolciari LoHacker.<br>
                     Vendiamo anche libri illegali.<br>
-                    Gli unci sistemi che imparerete a rompere sono di wafer
+                    Gli unici sistemi che imparerete a rompere sono i wafer.
                 </p>
             </section>
             <jsp:include page="aside.jsp"/>
