@@ -15,8 +15,16 @@ div.galleryProduct img {
   height: auto;
 }
 
-div.descProduct {
+@media only screen and (min-width: 768px) {
+  div.galleryProduct img {
+  width: 300px;
+  height: auto;
+  }
+}
+
+span.descProduct {
   padding: 5px;
+  float: right;
   text-align: left;
 }
 

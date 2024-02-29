@@ -38,13 +38,13 @@
                 <c:if test="${not empty listaProdotti}">
                    
                 <c:forEach items="${listaProdotti}" var="prodotto">
-                    <article class="col-4 col-s-12">
+                    <article class="col-12 col-s-12">
                         <div class="galleryProduct">
                             <a target="_blank" href="${prodotto.getImgCopertina()}">
                         <h3><bold>${prodotto.getTitolo()}</bold></h3>
                         <img src="${prodotto.getImgCopertina()}" alt="copertina del libro" width="100" height="160" />
                             </a>
-                        <div class="descProduct">
+                        <span class="descProduct">
                         <p>
                             Categoria: <b>${prodotto.getTipologia()}</b>
                         </p>
@@ -57,7 +57,7 @@
                             Prezzo: <b>${prodotto.getPrezzo()}</b>
                         </p>
                         <p> Pubblicato da: <i>${prodotto.getUsername()}</i></p>            
-                        </div>
+                        </span>
                         </div>
                     </article>
                       
