@@ -6,15 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="style/style.css" media="screen">
-         <link rel="stylesheet" type="text/css" href="style/asideStyle.css" media="screen">
-        <title>aside</title>
-    </head>
-    <body>
        <aside class="col-3 col-s-12">
            <h2>I NOSTRI SPONSOR</h2>
            
@@ -42,5 +34,5 @@
   <div class="desc">CLICCA QUI PER ACQUISTARE WOW</div>
   </div>    
             </aside>
-    </body>
+   
 </html>
