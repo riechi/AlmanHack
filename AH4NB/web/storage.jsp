@@ -22,6 +22,11 @@
 
     </head>
     <body>
+            <c:if test="${empty username}">
+                <c:redirect  url="login.jsp"/>
+            </c:if>
+        
+        <c:if test="${not empty username}">
             <jsp:include page="header.jsp"/>
             <jsp:include page="navbar.jsp"/>
             <!-- caricamento lista db -->
@@ -41,10 +46,13 @@
                     <article class="col-12 col-s-12">
                         <div class="galleryProduct">
                             <a target="_blank" href="${prodotto.getImgCopertina()}">
-                        <h3><bold>${prodotto.getTitolo()}</bold></h3>
+                        
                         <img src="${prodotto.getImgCopertina()}" alt="copertina del libro" width="100" height="160" />
                             </a>
                         <span class="descProduct">
+                        <p>
+                            <h2><bold>${prodotto.getTitolo()}</bold></h2>
+                        </p>
                         <p>
                             Categoria: <b>${prodotto.getTipologia()}</b>
                         </p>
@@ -67,6 +75,7 @@
         </main>
         <jsp:include page="aside.jsp"/>
         <jsp:include page="footer.jsp"/>
+        </c:if>
     </body>
 </html>
 

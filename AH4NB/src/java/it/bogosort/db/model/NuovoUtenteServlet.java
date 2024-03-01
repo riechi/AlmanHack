@@ -39,10 +39,10 @@ public class NuovoUtenteServlet extends HttpServlet {
         String cognome= request.getParameter("cognome");
 
         try{
-         Utils.checkString(username, 0, 20);
-         Utils.checkString(password, 0, 20);
-         Utils.checkString(nome, 0, 20);
-         Utils.checkString(cognome, 0, 20);
+         Utils.checkString(username, 1, 20);
+         Utils.checkString(password, 1, 20);
+         Utils.checkString(nome, 1, 20);
+         Utils.checkString(cognome, 1, 20);
 
             if(UtenteFactory.getInstance().checkUtente(username)){
                 UtenteFactory.getInstance().insertUtente(username, password, nome, cognome);
@@ -56,7 +56,7 @@ public class NuovoUtenteServlet extends HttpServlet {
        
         request.setAttribute("errorMessage", e.getMessage());
         request.setAttribute("link", "registrati.jsp");
-        request.getRequestDispatcher("error.jsp").forward(request, response);
+        request.getRequestDispatcher("user_error.jsp").forward(request, response);
         
         }
     }

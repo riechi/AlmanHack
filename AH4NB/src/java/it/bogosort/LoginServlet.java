@@ -51,7 +51,7 @@ public class LoginServlet extends HttpServlet {
         //login avvenuto
         session.setAttribute("username", username);
         session.setAttribute("lastLogin", Utils.convertTime(session.getLastAccessedTime()));
-        session.setMaxInactiveInterval(120);
+        session.setMaxInactiveInterval(600);
         response.sendRedirect("area_personale.jsp");
         
         }else{//login non avvenuto
@@ -65,7 +65,7 @@ public class LoginServlet extends HttpServlet {
         session.invalidate();
         request.setAttribute("errorMessage", e.getMessage());
         request.setAttribute("link", "login.jsp");
-        request.getRequestDispatcher("error.jsp").forward(request, response);
+        request.getRequestDispatcher("login.jsp").forward(request, response);
         
         }
         

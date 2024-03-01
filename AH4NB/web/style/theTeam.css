@@ -8,23 +8,12 @@ div.team {
 
 div.team:hover {
   border: 2px double #777;
-  
 }
 
 div.team img {
   width: 200px;
   height: auto;
   }
-.imagine{
-    border: 2px double #777;
-}
-
-div.team img {
-  width: 200px;
-  height: auto;
-  }
-
-  
   
 div.team img :hover{
   width: 200px;
@@ -32,12 +21,23 @@ div.team img :hover{
 }
 
 .bio{
-    margin: 10px;
+    margin: 5px;
 }
 
-
-
-@keyframes changeHover {
-  from
-  
+/*
+  Solo visualizzazione desktop, tutte le altre regole valgono di default per il mobile
+*/
+@media only screen and (min-width: 768px) {
+    
+    div.team img {
+  width: 200px;
+  height: auto;
+  float: left;
+  }
+    
+    .bio{
+  margin: 5px;
+  float: left;
+  }
+    
 }

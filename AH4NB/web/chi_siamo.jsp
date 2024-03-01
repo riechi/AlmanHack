@@ -31,7 +31,7 @@
             
             <div class="team">             
                 
-                <span class="imagine"><img class="col-6" src="img/dalek.jpg" width="200" height="200" alt="la foto del gestore del sito senza cattive intenzioni"/></span>   
+               <img src="img/dalek.jpg" width="200" height="auto" alt="la foto del gestore del sito senza cattive intenzioni"/>   
                <span class="bio">
                    <h3>Giuseppe Mocci</h3>
                    <p>
@@ -43,7 +43,7 @@
             
             <div class="team">             
                 
-                  <img class="col-6" src="img/sus_man.png" width="200" height="auto" alt="la foto del gestore del sito senza cattive intenzioni"/>   
+               <img src="img/sus_man.png" width="200" height="auto" alt="la foto del gestore del sito senza cattive intenzioni"/>   
                <span class="bio"> 
                    <h3>Antonio Riccardo Caredda</h3>
                    <p>

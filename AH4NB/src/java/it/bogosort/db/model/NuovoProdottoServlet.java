@@ -39,7 +39,6 @@ public class NuovoProdottoServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session=request.getSession(false);
         String username = session.getAttribute("username").toString();
-        ///String username= request.getParameter("username");
         String titolo= request.getParameter("titolo");
         String autore= request.getParameter("autore");
         String prezzo= request.getParameter("prezzo"); 
@@ -50,11 +49,11 @@ public class NuovoProdottoServlet extends HttpServlet {
       
         try{
             //controllo input
-        Utils.checkString(titolo, 0, 20);
-        Utils.checkString(autore, 0, 20);
-        Utils.checkString(immagine_copertina, 0, 200);
-        Utils.checkString(descrizione, 0, 500);
-        Utils.checkString(categoria, 0, 50);
+        Utils.checkString(titolo, 1, 50);
+        Utils.checkString(autore, 1, 20);
+        Utils.checkString(immagine_copertina, 1, 200);
+        Utils.checkString(descrizione, 1, 500);
+        Utils.checkString(categoria, 1, 50);
               
         
        
@@ -67,7 +66,7 @@ public class NuovoProdottoServlet extends HttpServlet {
         }catch(InvalidParamException e){
         request.setAttribute("errorMessage", e.getMessage());
         request.setAttribute("link", "newproduct.jsp");
-        request.getRequestDispatcher("error.jsp").forward(request, response);
+        request.getRequestDispatcher("product_error.jsp").forward(request, response);
         
         }
         

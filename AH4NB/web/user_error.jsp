@@ -9,7 +9,7 @@
         <meta name="author" content="Gruppo BogoSorted">
         <meta name="keywords" content="Hacking,books,deeepweebbe,nonetico,anoNymus">
         <meta name="description" content="lo giuro effebiai questo sito vende materiale illegale wink wink non dovevo scriverlo aiuto.">
-        <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="style/style.css" media="screen">
         <link rel="stylesheet" type="text/css" href="style/asideStyle.css" media="screen">
         <link rel="stylesheet" type="text/css" href="style/headerStyle.css" media="screen">
         <link rel="stylesheet" type="text/css" href="style/navbarStyle.css" media="screen">
@@ -18,19 +18,16 @@
    <%-- <c:if test="${empty username}">
             <c:redirect  url="login.jsp"/>
         </c:if> --%>
-        
-        <c:if test="${not empty username}">
             <jsp:include page="header.jsp"/>
             <jsp:include page="navbar.jsp"/>
             <section class="col-9 col-s-12">
-                <h3>errore ERRORE ERRORE</h3>
+                <p>
+                    <b>Dati utente inseriti non validi.</b>                   
+                </p>
                 
             </section>
             <jsp:include page="aside.jsp"/>
             <jsp:include page="footer.jsp"/>
-            
-        </c:if>
-        
-        
+              
     </body>
 </html>
